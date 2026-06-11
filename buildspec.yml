@@ -1,20 +1,11 @@
 version: 0.2
 
+env:
+  parameter-store:
+    API_URI:"/tabs/api_uri"
 phases:
-  install:
-    runtime-versions:
-      nodejs: 20
-    commands:
-      - npm install
-
   build:
     commands:
-      - echo "Building application"
-
-  post_build:
-    commands:
-      - echo "Build completed"
-
-artifacts:
-  files:
-    - '**/*'
+      - echo "build running"
+      - echo "my uri $API_URI"
+      - echo "build is finished"
